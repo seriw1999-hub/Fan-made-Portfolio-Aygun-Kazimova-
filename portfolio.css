@@ -1,0 +1,734 @@
+/* Aygun kazimova***************************************************** */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+section {
+  padding: 60px 10px; /* yuxarı-aşağı nəfəs boşluğu */
+}
+
+#shop, 
+#about, 
+#Discography, 
+#gallery {
+  scroll-margin-top: 100px; /* linklə klikləyəndə başlıq navbarın altında gizlənməsin */
+}
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; 
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffd90094; 
+  background:#02041fc4;
+  z-index: 1;
+}
+
+.overlay h1 {
+  font-family: "Imperial Script";
+  font-weight: 500;
+  font-size: 8vw;
+  letter-spacing: 0.7em;
+  margin: 35%;
+  text-align: center;
+  margin-left: 40%;
+  color: #ffd900; /* neon sarısı */
+  text-shadow: 
+    0 0 5px #ffd900,
+    0 0 10px #ffd900,
+    0 0 20px #ffea00,
+    0 0 40px #f0ce0c,
+    0 0 80px #ffd900,
+    0 0 90px #ffd900,
+    0 0 100px #ffea00,
+    0 0 150px #ffd900;
+}
+@keyframes neonFlicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow: 
+      0 0 5px #ffd900,
+      0 0 10px #ffd900,
+      0 0 20px #ffea00,
+      0 0 40px #ffea00,
+      0 0 80px #ffd900,
+      0 0 90px #ffd900,
+      0 0 100px #ffea00,
+      0 0 150px #ffd900;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+
+/* Overlay panel ********************************************************************************************************/
+.sidebar-overlay {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 280px;
+  height: 100vh;
+  z-index: 2;
+}
+.custom-navbar {
+  background-color: #000000a2 !important;
+  border-bottom: 1px solid #FFD700;
+}
+.custom-navbar .navbar-brand {
+  color: #FFD700 !important;
+  margin-right: 20px;
+  font-weight: bold;
+  font-size: 6.6rem;
+  
+}
+.custom-navbar .navbar-brand:hover {
+  color: #fff !important;
+  transition: color 0.3s;
+}
+.custom-navbar .nav-link {
+  color: #fff !important;
+ 
+  margin-top: 0px;
+  transition: color 0.3s;
+}
+.custom-navbar .nav-link:hover {
+  color: #FFD700 !important;
+
+}
+/* Offcanvas panel */
+.custom-offcanvas {
+  background-color: #000000 !important;
+}
+/* Dropdown menyu */
+.custom-dropdown {
+  background-color: #00000077 !important;
+  border: 1px solid #ffd90071;
+}
+.custom-dropdown .dropdown-item {
+  color: #fcfcfc !important;
+}
+.custom-dropdown .dropdown-item:hover {
+  background-color: #ffd90080 !important;
+  color: #000 !important;
+}
+/* Toggle icon qızılı */
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23FFD700' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 215, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Linklər ****************************************************************************************************************/
+.overlay-links li {
+  margin-bottom: 15px;
+}
+
+.overlay-links a {
+  color:#ffd900f5; 
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: color 0.8s ease;
+}
+
+.overlay-links a:hover {
+  color:#979797;
+  font-style:unset;
+  font-size: 40px;
+}
+.custom-navbar {
+  background-color: #c7000025; 
+  border-bottom: 2px solid #FFD700;
+}
+
+.custom-navbar .navbar-brand {
+  color: #ffe02f !important;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.custom-navbar .navbar-brand:hover {
+  color: #fff !important;
+}
+
+.custom-navbar .nav-link {
+  color: #fff !important;
+  margin-right: 15px;
+  transition: color 0.6s;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #FFD700 !important;
+}
+
+.dropdown-menu {
+  background-color: #000000a6 !important;
+  border: 1px solid #ffd90098;
+  margin-top: 10%;
+}
+
+.dropdown-menu .dropdown-item {
+  color: #fff !important;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #FFD700 !important;
+  color: #000 !important;
+}
+main{
+  min-height: 100vh;
+}
+/* shop-------------------------------------------- */
+/* Shop Section */
+#shop {
+  padding: 60px 100px;
+  background-color: #061742 ;
+  color: #130404;
+  text-align: center;
+}
+
+/* #shop h2 {
+  font-size: 5.5rem;
+  margin-top: 10px;
+  color: #FFD700;
+  font-family: "Imperial Script", cursive;
+} */
+#shop h4 {
+  font-size: 6.5rem;
+  margin-top: 5px;
+  color: #ff0000;
+  font-family: "Imperial Script", cursive;
+}
+
+/* Carousel */
+.shop-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 30px;
+  padding-bottom: 70px;
+  scrollbar-width: thin;
+}
+
+.shop-carousel::-webkit-scrollbar {
+  height: 18px;
+}
+.shop-carousel::-webkit-scrollbar-thumb {
+  background: #FFD700;
+  border-radius: 2px;
+}
+
+/* Cards */
+.shop-card {
+  flex: 0 0 250px;
+  background: #111;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 20px 80px rgba(255,215,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.shop-card:hover {
+  transform: translateY(48px);
+}
+
+.shop-card img {
+  width: 300px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #FFD700;
+}
+
+.shop-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+  color: #FFD700;
+}
+
+.shop-card p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.shop-card button {
+  background: #FFD700;
+  border: none;
+  color: #000;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.shop-card button:hover {
+  background: #e6c200;
+}
+/* shop end -------------------------------------------------- */
+/*-------------------------------------------- about --------------------------------------------- */
+.container-about{
+  background: linear-gradient(180deg, rgb(4, 1, 37), rgba(189, 150, 22, 0.541), rgb(29, 2, 2));
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  border-radius: 28px;
+  margin-bottom: 0px;
+}
+ .about-section {
+  padding: 0px;
+  background: url(//public/IMG/Başlıqsız\ dizayn\ \(1\).jpg) ;
+   /* fon rəngi */
+  backdrop-filter: blur(70%);
+  color: #daab13d0;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-family:'Courier New', Courier, monospace;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #FFD700;
+  background-color: #00000069;
+  border: 1px solid #ddc43962;
+  padding: 10px 10px;
+  border-radius: 8px;
+}
+
+.about-section p {
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 400;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+   background-color: #000000bb;
+  border: 1px solid #ddc43946;
+  padding: 20px 20px;
+  border-radius: 8px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-item {
+  position: relative;
+  margin: 20px 0;
+  padding-left: 60px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+  animation-delay: calc(0.2s * var(--index));
+}
+
+.timeline-date {
+  font-family: "Imperial Script";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  color: #FFD700;
+  background-color: #000000ad;
+  border: 1px solid #ddc439a2;
+  padding: 10px 10px;
+  border-radius: 8px;
+}
+.timeline-content h3{
+    background-color: #000000a1;
+  border: 1px solid #ddc43948;
+  padding: 0px;
+  border-radius: 8px;
+}
+.timeline-content  {
+  background-color: #00000070;
+  border: 1px solid #ddc539;
+  padding: 15px 30px;
+  border-radius: 8px;
+  max-width: 500px;
+  text-align: left;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobil üçün responsive */
+@media(max-width: 600px) {
+  .timeline-item {
+    padding-left: 20px;
+  }
+  .timeline-date {
+    left: -10px;
+  }
+}
+
+.scene {
+  position: relative;
+  background: #000;
+  padding: 40px 20px;
+  margin: 10px auto 20px auto; /* footer ilə məsafə */
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0px 30px 90px rgba(0, 0, 0, 0.438);
+}
+
+.wrapper-images {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 40px; /* əlavə boşluq */
+}
+
+.slide-track img {
+  width: 280px;  /* daha balanslı görünüş */
+  height: 280px;
+  object-fit: cover;
+  margin-right: 8px;
+  border-radius: 6px;
+  border: 1px solid #FFD700;
+}
+
+
+
+/* ==== DISCOGRAPHY sadələşdirmə ==== */
+#discography {
+  background: linear-gradient(80deg, #020b3bcc, #6b5302,#09083a93);
+  padding: 100px 60px;
+  border-radius: 12px;
+  margin: 0px auto;
+  min-height: 100vh;
+  position: relative;
+}
+
+#discography h2 {
+  font-family: "Imperial Script", cursive;
+  font-size: 6rem;
+  margin-top: 10px;
+  color: #FFD700;
+  text-align: center;
+}
+#discography h5 {
+  font-family: "Imperial Script", cursive;
+  font-size: 4rem;
+  margin-bottom: 20px;
+  color: #FFD700;
+  text-align: center;
+}
+
+#discography p {
+  text-align: center;
+  color: #000000;
+  font-size: 1.1rem;
+  max-width: 100vh;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
+  font-family:'Courier New', Courier, monospace
+}
+
+/* cədvəl dizaynı */
+#Discography table {
+  background-color: #111;
+  color: #f5f5f5;
+  border-radius: 6px;
+  overflow: hidden;
+  font-family:'Courier New', Courier, monospace
+}
+
+#Discography th {
+  background-color: #222;
+  color: #ffbd09;
+  font-weight: bold;
+  text-align: center;
+}
+
+#Discography td {
+  text-align: center;
+  vertical-align: middle;
+}
+/* Gallery start *****************************************************************************************************/
+.gallery{
+  margin-top: 0;
+}
+.gallery-title {
+  font-family: "Imperial Script";
+  font-weight: 500;
+  font-size: 5vw;
+  letter-spacing: 0.7em;
+  margin: 3%;
+  text-align: center;
+  color:#ff00de; /* neon sarısı */
+  text-shadow: 
+    0 0 5px #ff00de,
+    0 0 10px #ff00de,
+    0 0 20px #ff00de,
+    0 0 40px #ff00de,
+    0 0 80px #ff00de,
+    0 0 90px #ff00de,
+    0 0 100px #ff00de,
+    0 0 150px #ff00de;
+}
+@keyframes neon6 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 10px 20px #865f16, 0 0 30px #fff, 0 0 40px #ff00de,
+      0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de,
+      0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+  }
+}
+
+.wrapper-images {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(500%); 
+  animation: scroll 80s linear infinite; 
+}
+
+.slide-track img {
+  width: 400px; /* hər şəkilin eni */
+  height: 450px; /* istəyə uyğun dəyiş */
+  object-fit: cover;
+  margin-right: 55px;
+  background-color:#ff00de ;
+}
+
+/* animasiya */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-80%); } /* track yarısını sola sürüşdür */
+}
+.container-wa .floating-button {
+  position: fixed;
+  bottom: 10px;
+  right: 12px;
+  width: 60px;
+  height: 60px;
+  background-color: #f5c011e1;
+  color: rgb(0, 0, 0);
+  border-radius: 50px;
+  text-align: center;
+  font-size: 35px;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px #666;
+  z-index: 1000;
+}
+.container-wa .floating-button:hover {
+  background-color: #ad9f1f;
+}
+.container-wa .floating-button .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  line-height: 60px;
+  text-align: center;
+  transition: all 0.3s;
+}
+.container-wa .floating-button .icon.wa {
+  animation: wa-out 0.3s;
+}
+.container-wa .floating-button .icon.close {
+  opacity: 0;
+  margin: auto;
+  transform: rotateZ(-70deg);
+  animation: close-out 0.3s;
+}
+.container-wa .card {
+  font-family: 'Quicksand', sans-serif;
+  position: absolute;
+  width: 280px;
+  height: 276px;
+  background-color:white;
+  border-radius: 5px;
+  right: 40px;
+  bottom: 88px;
+  display: none;
+  border:1px solid rgba(0, 0, 0, 0.15);
+  z-index: 10000;
+}
+.container-wa .card .banner-header {
+  background-image: url("../../investio.com.br/images/banner/bg-chat-whatsapp.jpg");
+  background-size: cover;
+  color: white;
+  padding: 20px;
+  padding-bottom: 40px;
+  background-color: #061742;
+}
+.container-wa .card .banner-body {
+  flex-grow: 1;
+  background-color: #eaeaea;
+  padding: 15px;
+}
+.container-wa .card .banner-body .card-atendente {
+  margin-top: -50px;
+  background-color: white;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+}
+.container-wa .card .banner-body .card-atendente .dados-atendente {
+  display: flex;
+}
+.container-wa .card .banner-body .card-atendente .dados-atendente .avatar {
+  padding: 15px;
+}
+.container-wa .card .banner-body .card-atendente .dados-atendente .avatar img {
+  border-radius: 50%;
+}
+.container-wa .card .banner-body .card-atendente .dados-atendente .informacoes {
+  padding: 15px;
+}
+.container-wa .card .banner-body .card-atendente .botao-atendente {
+  display: flex;
+}
+.container-wa .card .banner-body .card-atendente .botao-atendente .btn {
+  color: white;
+  background-color: #d0d324;
+  border-radius: 15px;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+.container-wa.is-opened .icon.wa {
+  animation: wa-in 0.15s linear;
+  animation-fill-mode: forwards;
+}
+.container-wa.is-opened .icon.close {
+  animation: close-in 0.2s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+}
+.container-wa.is-opened .card {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+}
+
+.container-wa.is-opened .icon.wa {
+  animation: wa-in 0.15s linear;
+  animation-fill-mode: forwards;
+}
+
+.container-wa.is-opened .icon.close {
+  animation: close-in 0.2s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes close-in {
+  from {
+    opacity: 0;
+    transform: rotateZ(-70deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes close-out {
+  from {
+    opacity: 1;
+    transform: rotateZ(0deg);
+  }
+  to {
+    opacity: 0;
+    transform: rotateZ(-70deg);
+  }
+}
+@keyframes wa-in {
+  from {
+    opacity: 1;
+    transform: rotateZ(0deg);
+  }
+  to {
+    opacity: 0;
+    transform: rotateZ(180deg);
+  }
+}
+@keyframes wa-out {
+  from {
+    opacity: 0;
+    transform: rotateZ(180deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateZ(0deg);
+  }
+}
+/* =================== FOOTER ============================================================================================================================================ */
+/* ==== FOOTER-in qalxmasını önlə ==== */
+.custom-footer {
+  clear: both; 
+  margin-top: 60px;
+  position: relative;
+  z-index: 1;
+  background-color: #111111;     /* fon rəngi */
+  color: #FFD700;             /* qızılı mətn rəngi */
+  padding: 20px 0;
+  border-top: 1px solid #333;
+}
+
+.custom-footer p {
+  margin: 0;
+  font-size: 0.95rem;
+   font-family: 'Courier New', Courier, monospace;
+}
+
+.custom-footer a {
+  color: #FFD700;
+  margin: 0 8px;
+  font-size: 1.6rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-footer a:hover {
+  color: #fff;
+  transform: scale(3.2rem);   /* hover zamanı böyüsün */
+}
+
